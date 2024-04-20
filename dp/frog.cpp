@@ -22,16 +22,23 @@ int f (int i){
 }
 int fbu(){
     int n = h.size();
+    dp.resize(1000005 ,INT_MAX);
     dp[n-1] = 0;
-    for(int i = n-2;i>=2;i--)
+    for(int i = n-2;i>=0;i--){
+        for(int j=1;j<=k ;j++){
+            if(i+j>= h.size()) break;
+            dp[i] = min(dp[i] ,abs(h[i]-h[i+j])+dp[i+j]);
+        }
+    }
+        return dp[0];
 }
 int main(){
     int n;
     cin>>n>>k;
     h.resize(n);
-    dp.resize(n ,-1); 
+    //dp.resize(n ,-1); 
     for(int i = 0 ; i<n; i++){
         cin>>h[i];
     }
-    cout<<f(0)<<" ";
+    cout<<fbu();    //cout<<f(0)<<" ";
 }
