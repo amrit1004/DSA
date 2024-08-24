@@ -13,12 +13,13 @@ void add_edge(int src ,int dest ,bool bi_dir =true){
       if(bi_dir) graph[dest].push_back(src);
 } 
 
-bool dfs(int curr , int end ,vector<int>& path ){
+void dfs(int curr , int end ,vector<int>& path ){
     if(curr == end) {
         path.push_back(curr);
         result.push_back(path);
         path.pop_back();
         return;
+        
     }
      visited.insert(curr);
      path.push_back(curr); //mark visited
