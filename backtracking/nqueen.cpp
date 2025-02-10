@@ -57,6 +57,16 @@ vector<vector<string>> nqueen(int n){
    return result;
 }
 int main(){
-   nqueen(7);
+  int n = 8; // You can set the desired size of the chessboard
+    vector<vector<string>> solutions = nqueen(n);
+    
+    // Print each solution
+    for (const auto& solution : solutions) {
+        for (const string& row : solution) {
+            cout << row << endl;
+        }
+        cout << "----------------\n"; // Separator between solutions
+    }
+    return 0;;
     
 }

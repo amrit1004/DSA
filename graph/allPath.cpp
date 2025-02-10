@@ -17,7 +17,7 @@ void dfs(int curr , int end ,vector<int>& path ){
     if(curr == end) {
         path.push_back(curr);
         result.push_back(path);
-        path.pop_back();
+        path.pop_back(); //other path maybe
         return;
         
     }
