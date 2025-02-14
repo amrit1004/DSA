@@ -12,13 +12,12 @@ public:
             size[i] = 1; 
         }
     }
-
+     //path compression
     int findUPar(int node) {
         if(node == parent[node])
             return node; 
         return parent[node] = findUPar(parent[node]); 
-    }
-
+    }  
     void unionByRank(int u, int v) {
         int ulp_u = findUPar(u); 
         int ulp_v = findUPar(v); 
