@@ -12,4 +12,4 @@ void generate(string s ,int open , int close ,int n ){
 int main(){
     string s;
     generate("", 0 ,0,3);
-}
+}                                                          

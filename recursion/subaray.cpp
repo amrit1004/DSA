@@ -8,12 +8,12 @@ void subarray(vector<int> v , int arr[] ,int n , int idx){
         }
         cout<<endl;
         return ;
+    }
         subarray(v, arr, n , idx+1);
         if(v.size()== 0|| arr[idx-1] == v[v.size()-1]){
             v.push_back(arr[idx]);
             subarray(v, arr, n , idx+1);
         }
-    }
 }
 int main(){
     int arr[] = {1 , 2, 3 ,4};
